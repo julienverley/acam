@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+// import { ThemeProvider } from "@mui/styles";
+// import theme from "../theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    // <ThemeProvider theme={theme}>
     <html lang="fr" className={inter.className}>
       <body className="bg-stone-100">
         <Navbar />
@@ -23,5 +26,6 @@ export default function RootLayout({ children }) {
         <Footer />
       </body>
     </html>
+    // </ThemeProvider>
   );
 }
