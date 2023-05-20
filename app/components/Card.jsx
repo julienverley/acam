@@ -9,7 +9,7 @@ const Card = ({ title, date, src, alt }) => {
           className="h-48"
           src={src}
           alt={alt}
-          width={800}
+          width={900}
           height={500}
           style={{ objectFit: "cover" }}
         />
