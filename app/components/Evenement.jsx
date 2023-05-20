@@ -4,12 +4,12 @@ import Link from "next/link";
 
 const Evenement = () => {
   return (
-    <div>
-      <h2 className="text-4xl text-center font-bold mb-6 tracking-wide">
-        L&apos;événement :
-      </h2>
+    <div className="mb-24 mx-auto w-full lg:w-3/5 xl:w-2/5">
       <Link href={"https://www.lesjartdinsdemontagny.fr/index.html"}>
-        <div className="mb-24 w-3/5 mx-auto">
+        <h2 className="text-2xl text-center font-bold mb-12 tracking-wide sm:text-4xl">
+          L&apos;événement :
+        </h2>
+        <div className="">
           <Image
             src="/202305_jartdins.jpeg"
             alt="JARTdins 2023"

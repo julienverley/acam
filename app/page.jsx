@@ -5,6 +5,7 @@ import Evenement from "./components/Evenement";
 import Evenements from "./components/Evenements";
 import Hero from "./components/Hero";
 import Partenaires from "./components/Partenaires";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HomePage = () => {
   return (
