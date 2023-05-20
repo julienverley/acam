@@ -19,8 +19,7 @@ const Evenements = () => {
               Tout afficher
             </button>
           </div>
-          {/* Cards */}
-          {/* Faire un filter pour filtrer les deux futurs true, qui s'affichent normalement dans Evénements, des autres qui sont par exemple grisés ; faire un autre filter pour n'afficher que 2 futurs événements dans la page d'Accueil (mais tous dans la page Evénements) */}
+          {/* 2 next events */}
           <div className="h-auto flex gap-6 flex-col col-span-1 md:flex-row-reverse md:col-span-2 md:h-60">
             {data?.slice(0, 2).map((event) => (
               <Card
