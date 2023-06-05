@@ -1,21 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Evenement from "./components/Evenement";
-import Evenements from "./components/Evenements";
+import Event from "./components/Event";
+import Events from "./components/Events";
 import Hero from "./components/Hero";
-import Partenaires from "./components/Partenaires";
+import Partners from "./components/Partners";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HomePage = () => {
   return (
-    // Using tailwind:
-    // <div className="flex flex-col items-center justify-center min-h-screen bg-crem">
     <div className="">
       <Hero />
-      <Evenement />
-      <Evenements />
-      <Partenaires />
+      <Event />
+      <Events />
+      <Partners />
     </div>
   );
 };

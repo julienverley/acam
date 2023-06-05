@@ -1,6 +1,6 @@
 import React from "react";
 export const metadata = {
-  title: "Acam | jARTdins",
+  title: "JARTdins | Acam",
 };
 
 const JartdinsPage = () => {

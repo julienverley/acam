@@ -1,14 +1,15 @@
 import React from "react";
 export const metadata = {
-  title: "Acam | Questions",
+  title: "Questions | Acam",
 };
 
 const QuestionsPage = () => {
   return (
-    <div className="mb-24 flex justify-center">
+    <div className="my-24 flex justify-center">
       <div className="max-w-md">
-        <h1 className="text-2xl">Questions fréquentes</h1>
-        <br />
+        <h1 className="text-3xl font-bold text-center mb-12">
+          Questions fréquentes
+        </h1>
         <ul>
           <li>
             <h2 className="text-lg">Question 1 :</h2>

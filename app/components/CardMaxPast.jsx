@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import PlaceIcon from "@mui/icons-material/Place";
+import ScheduleIcon from "@mui/icons-material/Schedule";
 
-const CardMax = ({ title, date, src, alt, description }) => {
+const CardMax = ({ title, date, location, src, alt, description }) => {
   const [isImageExpanded, setIsImageExpanded] = useState(false);
 
   const handleImageClick = () => {
@@ -19,25 +21,45 @@ const CardMax = ({ title, date, src, alt, description }) => {
     ));
 
   return (
-    <div className="h-auto flex flex-col my-6 bg-gray-200 p-6 md:flex-row">
-      <div
-        className="flex items-center border-4 border-white md:w-1/2"
-        onClick={handleImageClick}
-        style={{ cursor: "pointer" }}
-      >
-        <Image
-          className={`h-96 grayscale ${isImageExpanded ? "h-full" : ""}`}
-          src={src}
-          alt={alt}
-          width={800}
-          height={500}
-          style={{ objectFit: "contain" }}
-        />
+    <div>
+      {/* <div className="absolute -rotate-3 z-10 bg-gray-300 h-10 py-5 px-4 drop-shadow-2xl flex items-center"> */}
+      <div className="absolute -rotate-3 opacity-75 z-10 bg-gray-300 h-10 py-12 px-8 drop-shadow-2xl flex items-center">
+        Événement passé
       </div>
-      <div className="text-black px-0 mt-3 sm:px-3 md:mt-0 md:w-1/2">
-        <h3 className="text-md font-bold sm:text-lg">{title}</h3>
-        <h4 className="text-md my-3 sm:text-lg">{date}</h4>
-        <p className="text-sm sm:text-lg">{descriptionWithLineBreaks}</p>
+      <div className="h-auto flex flex-col my-12 bg-white p-6 md:flex-row">
+        <div
+          className="flex items-center border-4 border-white relative md:w-1/2"
+          onClick={handleImageClick}
+          style={{ cursor: "pointer" }}
+        >
+          <Image
+            // SEO: disable(d) grayscale?
+            className={`h-96 grayscale ${isImageExpanded ? "h-full" : ""}`}
+            src={src}
+            alt={alt}
+            width={800}
+            height={500}
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+        <div className="text-black px-0 mt-3 sm:px-3 md:mt-0 md:w-1/2">
+          <h3 className="mb-3 ml-7 text-md font-bold sm:text-2xl">{title}</h3>
+          <div className="flex gap-2 items-center">
+            <div className="w-6 h-10 flex items-center">
+              <ScheduleIcon />
+            </div>
+            <h4 className="text-md my-3 sm:text-md">{date}</h4>
+          </div>
+          <div className="flex gap-2 items-center">
+            <div className="w-6 h-10 flex items-center">
+              <PlaceIcon />
+            </div>
+            <h4 className="text-md my-2 sm:text-md">{location}</h4>
+          </div>
+          <p className="mt-3 ml-7 text-sm sm:text-base">
+            {descriptionWithLineBreaks}
+          </p>
+        </div>
       </div>
     </div>
   );
