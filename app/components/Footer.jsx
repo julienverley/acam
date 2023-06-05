@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer>
       {/* <div className="container-none h-24 mx-auto flex flex-col justify-between items-center px-6 bg-yellow-300 text-black sm:flex-row sm:space-y-0"> */}
-      <div className="container-none h-44 py-2 mx-auto flex flex-col justify-between items-center px-6 bg-yellow-300 text-black text-xs sm:flex-row sm:space-y-0 sm:h-24">
+      <div className="container-none h-44 py-2 mx-auto flex flex-col justify-between items-center px-6 bg-yellow-300 text-black text-xs md:flex-row md:space-y-0 md:h-24 md:text-base">
         {/* Copyright */}
         <Link href="/legal">
           <div className="flex items-center gap-2">
@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="flex items-center gap-2">
             <BalanceIcon />
             {/* <div className="w-48">Copyright 2023</div> */}
-            <div className="">Règlement intérieur</div>
+            <div className="">Règlement</div>
           </div>
         </Link>
         {/* FAQ */}
@@ -36,12 +36,16 @@ const Footer = () => {
             <div className="">Questions fréquentes</div>
           </div>
         </Link>
-        <a className="flex items-center" href="https://vexinweb.fr/">
+        <a
+          className="flex items-center"
+          target="_blank"
+          href="https://vexinweb.fr/"
+        >
           <div>Réalisé par</div>
           <div>
             <Image
               href="https://vexinweb.fr/"
-              src="/logo_vexinweb.png"
+              src="/images/logos/logo_vexinweb.png"
               alt="Logo VexinWEB"
               style={{
                 maxWidth: "100%",

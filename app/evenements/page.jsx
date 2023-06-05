@@ -1,21 +1,21 @@
 import React from "react";
 import CardMax from "../components/CardMax";
 import CardMaxPast from "../components/CardMaxPast";
-import data from "../mock/data";
+import dataEvents from "../mock/dataEvents";
 
 export const metadata = {
-  title: "Acam | événements",
+  title: "Evénements | Acam",
 };
 
 const EvenementsPage = () => {
-  console.log(data);
+  console.log(dataEvents);
   return (
     <div>
       <h1 className="text-2xl text-center font-bold my-12 tracking-wide sm:text-4xl">
         Les événements de l&apos;Acam
       </h1>
-      <div className="mb-24 mx-auto w-full lg:w-3/5 xl:w-2/5">
-        {data?.map((event) => (
+      <div className="mb-24 mx-auto w-full lg:w-4/5 xl:w-3/5">
+        {dataEvents?.map((event) => (
           <div key={event.id} className="my-6">
             {event.past ? (
               // Affichage différent si past est true
@@ -25,6 +25,7 @@ const EvenementsPage = () => {
                   alt={event.alt}
                   title={event.title}
                   date={event.date}
+                  location={event.location}
                   description={event.description}
                 />
               </div>
@@ -36,6 +37,7 @@ const EvenementsPage = () => {
                   alt={event.alt}
                   title={event.title}
                   date={event.date}
+                  location={event.location}
                   description={event.description}
                 />
               </div>

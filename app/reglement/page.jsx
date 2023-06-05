@@ -1,11 +1,13 @@
 import React from "react";
+export const metadata = {
+  title: "Règlement | Acam",
+};
 
 const ReglementPage = () => {
   return (
-    <div className="mb-24 flex justify-center">
+    <div className="my-24 flex justify-center">
       <div className="max-w-md">
-        <h1 className="text-2xl">Règlement intérieur</h1>
-        <br />
+        <h1 className="text-3xl font-bold text-center mb-12">Règlement</h1>
         <ul>
           <li>
             <h2 className="text-lg">Paragraphe 1</h2>

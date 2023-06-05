@@ -1,14 +1,15 @@
 import React from "react";
 export const metadata = {
-  title: "Acam | mentions légales",
+  title: "Mentions légales | Acam",
 };
 
 const LegalPage = () => {
   return (
-    <div className="mb-24 flex justify-center">
+    <div className="my-24 flex justify-center">
       <div className="max-w-md">
-        <h1 className="text-2xl">Mentions légales</h1>
-        <br />
+        <h1 className="text-3xl font-bold text-center mb-12">
+          Mentions légales
+        </h1>
         <ul>
           <li>
             <h2 className="text-lg">
