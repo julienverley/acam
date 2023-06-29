@@ -4,7 +4,7 @@ import Image from "next/image";
 import PlaceIcon from "@mui/icons-material/Place";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 
-const CardMax = ({ title, date, location, src, alt, description }) => {
+const CardEventPast = ({ title, date, location, src, alt, description }) => {
   const [isImageExpanded, setIsImageExpanded] = useState(false);
 
   const handleImageClick = () => {
@@ -23,7 +23,8 @@ const CardMax = ({ title, date, location, src, alt, description }) => {
   return (
     <div>
       {/* <div className="absolute -rotate-3 z-10 bg-gray-300 h-10 py-5 px-4 drop-shadow-2xl flex items-center"> */}
-      <div className="absolute -rotate-3 opacity-75 z-10 bg-gray-300 h-10 py-12 px-8 drop-shadow-2xl flex items-center">
+      {/* <div className="absolute -rotate-3 opacity-75 z-10 bg-gray-300 h-10 py-12 px-8 drop-shadow-2xl flex items-center"> */}
+      <div className="absolute opacity-75 z-10 bg-gray-300 h-10 py-12 px-8 drop-shadow-2xl flex items-center">
         Événement passé
       </div>
       <div className="h-auto flex flex-col my-12 bg-white p-6 md:flex-row">
@@ -65,4 +66,4 @@ const CardMax = ({ title, date, location, src, alt, description }) => {
   );
 };
 
-export default CardMax;
+export default CardEventPast;

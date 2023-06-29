@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const CardNextEvent = ({ src, alt, link }) => {
+const CardEventNext = ({ src, alt, link }) => {
   return (
     <div>
       <Link href={link} target="blank">
@@ -17,4 +17,4 @@ const CardNextEvent = ({ src, alt, link }) => {
   );
 };
 
-export default CardNextEvent;
+export default CardEventNext;

@@ -7,7 +7,7 @@ const ReglementPage = () => {
   return (
     <div className="my-24 flex justify-center">
       <div className="max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-12">Règlement</h1>
+        <h1 className="text-3xl font-bold text-center mb-24">Règlement</h1>
         <ul>
           <li>
             <h2 className="text-lg">Paragraphe 1</h2>

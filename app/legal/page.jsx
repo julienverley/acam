@@ -7,7 +7,7 @@ const LegalPage = () => {
   return (
     <div className="my-24 flex justify-center">
       <div className="max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-12">
+        <h1 className="text-3xl font-bold text-center mb-24">
           Mentions légales
         </h1>
         <ul>
