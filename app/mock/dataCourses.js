@@ -2,6 +2,19 @@
 
 const dataCourses = [
   {
+    id: 3,
+    title: "Cours de guitare",
+    date1: "Lundi de 9h à 12h et 17h à 20h",
+    date2: "Mardi de 17h à 19h",
+    date3: "Mercredi de 9h à 12h et de 13h30 à 18h30",
+    location: "Annexe de la mairie",
+    description: "Cours individuels de 30 min pour tout public.",
+    src: "/images/courses/a.jpg?",
+    alt: "piano",
+    link: "",
+    full: false,
+  },
+  {
     id: 2,
     title: "Cours de piano",
     date1: "Lundi de 9h à 12h et 17h à 20h",
@@ -9,10 +22,10 @@ const dataCourses = [
     date3: "Mercredi de 9h à 12h et de 13h30 à 18h30",
     location: "Annexe de la mairie",
     description: "Cours individuels de 30 min pour tout public.",
-    src: "/images/courses/piano.jpg?",
+    src: "/images/courses/b.jpg?",
     alt: "piano",
     link: "",
-    full: false,
+    full: true,
   },
   {
     id: 1,
@@ -22,7 +35,7 @@ const dataCourses = [
     date3: "",
     location: "1er étage de la salle des fêtes",
     description: "Cours individuels de 30 min pour tout public.",
-    src: "/images/courses/violin.jpg",
+    src: "/images/courses/c.jpg",
     alt: "violon",
     link: "",
     full: true,

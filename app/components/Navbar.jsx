@@ -15,7 +15,6 @@ const Navbar = () => {
   };
 
   return (
-    // <header className="relative flex items-center justify-between px-6 h-24 mb-6 bg-yellow-300 lg:mb-24">
     <header className="relative flex items-center justify-between px-6 h-24 bg-yellow-300">
       <Link href="/">
         <Image
@@ -52,14 +51,6 @@ const Navbar = () => {
               Evénements
             </li>
           </Link>
-          {/* <Link href="/jartdins">
-            <li
-              className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
-              onClick={handleMenuItemClick}
-            >
-              JARTdins
-            </li>
-          </Link> */}
           <Link href="/souvenirs">
             <li
               className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
@@ -112,7 +103,7 @@ const Navbar = () => {
           className={`${
             isMenuOpen ? "block" : "hidden"
             // } absolute top-0 left-0 w-full h-screen bg-white`}
-          } absolute top-0 left-0 w-full h-fit bg-yellow-300`}
+          } absolute top-0 left-0 w-full h-fit bg-yellow-300 z-20`}
         >
           {/* <ul className="flex flex-col items-center pt-24"> */}
           <ul className="flex flex-col items-center pt-6">
@@ -148,14 +139,6 @@ const Navbar = () => {
                 Evénements
               </li>
             </Link>
-            <Link href="/jartdins">
-              <li
-                className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
-                onClick={handleMenuItemClick}
-              >
-                JARTdins
-              </li>
-            </Link>
             <Link href="/souvenirs">
               <li
                 className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
@@ -164,6 +147,22 @@ const Navbar = () => {
                 Souvenirs
               </li>
             </Link>
+            {/* <Link href="/jartdins"> */}
+            <a target="_blank" href="https://www.lesjartdinsdemontagny.fr/">
+              <li
+                className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
+                onClick={handleMenuItemClick}
+              >
+                JARTdins
+              </li>{" "}
+            </a>
+            {/* <li
+                className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
+                onClick={handleMenuItemClick}
+              >
+                JARTdins
+              </li> */}
+            {/* </Link> */}
           </ul>
         </div>
       </div>

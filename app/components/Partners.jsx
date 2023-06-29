@@ -67,7 +67,7 @@ const Partners = () => {
   return (
     <div className="mb-24 w-full mx-auto flex flex-col border-solid border-2 border-black-100 lg:w-3/5 xl:w-2/5">
       <div className="">
-        <h2 className="p-6 text-3xl font-semibold text-center lg:text-left">
+        <h2 className="p-6 text-2xl font-semibold text-center lg:text-left sm:text-4xl">
           Partenaires de l&apos;Acam
         </h2>
       </div>

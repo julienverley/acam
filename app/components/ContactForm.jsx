@@ -10,7 +10,8 @@ const EmployeeCreateForm = () => {
 
   // React-select contact subjet list:
   const subjectOptions = [
-    { value: "rejoindre", label: "Rejoindre l'association" },
+    { value: "rejoindre l'association", label: "Rejoindre l'association" },
+    { value: "rejoindre un cours", label: "Rejoindre un cours" },
     { value: "association", label: "Informations sur l'association" },
     { value: "cours", label: "Informations sur les cours" },
     { value: "concerts", label: "Informations sur les concerts" },
@@ -44,7 +45,7 @@ const EmployeeCreateForm = () => {
 
   return (
     <>
-      <h1 className="text-3xl font-bold text-center mb-12">
+      <h1 className="text-3xl font-bold text-center mb-24">
         Formulaire de contact
       </h1>
       <form onSubmit={formik.handleSubmit} autoComplete="off" className="">
@@ -52,7 +53,7 @@ const EmployeeCreateForm = () => {
         <div className=" mb-3">
           <div className="flex flex-col w-80">
             {" "}
-            <label htmlFor="firstName" className="mb-1">
+            <label htmlFor="firstName" className="mb-2">
               Prénom
             </label>
             <input
@@ -80,7 +81,7 @@ const EmployeeCreateForm = () => {
         <div className=" mb-3">
           <div className="flex flex-col w-80">
             {" "}
-            <label htmlFor="lastname" className="mb-1">
+            <label htmlFor="lastname" className="mb-2">
               Nom
             </label>
             <input
@@ -108,7 +109,7 @@ const EmployeeCreateForm = () => {
         <div className=" mb-3">
           <div className="flex flex-col w-80">
             {" "}
-            <label htmlFor="email" className="mb-1">
+            <label htmlFor="email" className="mb-2">
               Courriel
             </label>
             <input
@@ -133,7 +134,7 @@ const EmployeeCreateForm = () => {
         {/* Phone number */}
         <div className=" mb-3">
           <div className="flex flex-col w-80">
-            <label htmlFor="phone" className="mb-1">
+            <label htmlFor="phone" className="mb-2">
               Numéro de téléphone
             </label>
             <input
@@ -159,7 +160,7 @@ const EmployeeCreateForm = () => {
         <div className="mb-9">
           {/* Subject message */}
           <div className="flex flex-col w-80 mb-3">
-            <label htmlFor="subject" className="mb-1">
+            <label htmlFor="subject" className="mb-2">
               Sujet du message
             </label>
             <CustomSelect
@@ -176,7 +177,7 @@ const EmployeeCreateForm = () => {
           </div>
           {/* Input message */}
           <div className="flex flex-col w-80 mb-3">
-            <label htmlFor="message" className="mb-1">
+            <label htmlFor="message" className="mb-2">
               Message
             </label>
             <textarea
@@ -202,8 +203,8 @@ const EmployeeCreateForm = () => {
 
         {/* File */}
         <div className="flex flex-col w-80 mb-12">
-          <label htmlFor="file" className="mb-1">
-            Envoyer une pièce jointe
+          <label htmlFor="file" className="mb-2">
+            Envoyer une pièce jointe (optionnel)
           </label>
           <input
             onChange={(event) => setFile(event.target.files[0])}

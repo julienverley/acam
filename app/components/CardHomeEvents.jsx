@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Card = ({ title, date, src, alt }) => {
+const CardHomeEvents = ({ title, date, src, alt }) => {
   return (
     <div className="h-60">
       <div className="">
@@ -23,4 +23,4 @@ const Card = ({ title, date, src, alt }) => {
   );
 };
 
-export default Card;
+export default CardHomeEvents;

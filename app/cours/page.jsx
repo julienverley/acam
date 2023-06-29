@@ -1,6 +1,6 @@
 import React from "react";
-import CardMaxCourse from "../components/CardMaxCourse";
-import CardMaxCourseFull from "../components/CardMaxCourseFull";
+import CardCourse from "../components/CardCourse";
+import CardCourseFull from "../components/CardCourseFull";
 import dataCourses from "../mock/dataCourses";
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
 const CoursPage = () => {
   return (
     <div>
-      <h1 className="text-2xl text-center font-bold my-12 tracking-wide sm:text-4xl">
+      <h1 className="text-2xl text-center font-bold my-24 tracking-wide sm:text-4xl">
         Cours proposés par l&apos;Acam
       </h1>
       <div className="mb-24 mx-auto w-full lg:w-4/5 xl:w-3/5">
@@ -19,7 +19,7 @@ const CoursPage = () => {
             {course.full ? (
               // Affichage différent si full est true, qu'il n'y a plus de place dans le cours
               <div>
-                <CardMaxCourseFull
+                <CardCourseFull
                   src={course.src}
                   alt={course.alt}
                   title={course.title}
@@ -33,7 +33,7 @@ const CoursPage = () => {
             ) : (
               // Affichage par défaut pour cours avec des places disponibles
               <div>
-                <CardMaxCourse
+                <CardCourse
                   src={course.src}
                   alt={course.alt}
                   title={course.title}
