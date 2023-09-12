@@ -15,11 +15,11 @@ const CardCourseFull = ({
   alt,
   description,
 }) => {
-  const [isImageExpanded, setIsImageExpanded] = useState(false);
+  // const [isImageExpanded, setIsImageExpanded] = useState(false);
 
-  const handleImageClick = () => {
-    setIsImageExpanded(!isImageExpanded);
-  };
+  // const handleImageClick = () => {
+  //   setIsImageExpanded(!isImageExpanded);
+  // };
 
   const descriptionWithLineBreaks = description
     .split("\n")
@@ -39,12 +39,13 @@ const CardCourseFull = ({
       <div className="h-auto flex flex-col my-12 bg-white p-6 md:flex-row">
         <div
           className="flex items-center border-4 border-white relative md:w-1/2"
-          onClick={handleImageClick}
+          // onClick={handleImageClick}
           style={{ cursor: "pointer" }}
         >
           <Image
             // SEO: disable(d) grayscale?
-            className={`h-96 grayscale ${isImageExpanded ? "h-full" : ""}`}
+            // className={`h-96 grayscale ${isImageExpanded ? "h-full" : ""}`}
+            className="h-96 grayscale"
             src={src}
             alt={alt}
             width={800}
