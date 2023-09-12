@@ -19,7 +19,7 @@ const LegalPage = () => {
             <ul>
               <li>Nom de l&apos;association </li>
               <li>Siège social </li>
-              <li>Numéro de téléphone </li>
+              <li>Numéro de téléphone : 0344499807</li>
               <li>Adresse e-mail </li>
               <li>
                 Numéro d&apos;identification de l&apos;association (SIREN ou
