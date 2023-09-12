@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Card from "./Card";
+import CardHomeEvents from "./CardHomeEvents";
 import dataEvents from "../mock/dataEvents";
 // import Image from "next/image";
 
@@ -15,14 +15,13 @@ const Events = () => {
         <div className="gap-y-6 justify-between max-h-auto mx-auto lg:h-64 lg:gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {/* Title & button */}
           <div className="flex flex-col justify-between h-48 col-span-1 lg:h-48">
-            <h2 className="text-3xl font-semibold text-center lg:text-left">
+            <h2 className="text-2xl font-semibold text-center lg:text-left sm:text-4xl">
               {isPlural ? "Événements" : "Événement"} à venir
             </h2>
             <button className="p-6 text-white bg-zinc-800/80 hover:bg-zinc-800">
               {isPlural
                 ? `Voir les ${numberOfEvents} événements`
                 : "Voir l'événement"}
-              {/* Afficher tous les événements */}
             </button>
           </div>
           {/* 2 next events */}
@@ -31,7 +30,7 @@ const Events = () => {
               ?.filter((event) => !event.past)
               .slice(0, 2)
               .map((event) => (
-                <Card
+                <CardHomeEvents
                   src={event.src}
                   alt={event.alt}
                   key={event.id}

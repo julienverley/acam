@@ -1,33 +1,54 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const Partners = () => {
   const images = [
-    { src: "/images/partners/artension.png", alt: "Artension" },
-    { src: "/images/partners/aupres.png", alt: "Auprès de mon arbre" },
+    { src: "/images/partners/artension.png", alt: "Artension", link: "" },
+    {
+      src: "/images/partners/aupres.png",
+      alt: "Auprès de mon arbre",
+      link: "",
+    },
     {
       src: "/images/partners/courcelles_les_gisors4.png",
       alt: "Auprès de mon arbre",
+      link: "",
     },
     {
       src: "/images/partners/dumas.png",
       alt: "Dumas piano",
+      link: "",
     },
     {
       src: "/images/partners/guillemette.png",
       alt: "Yann Guillemette",
+      link: "",
     },
-    { src: "/images/partners/hauts.png", alt: "Hauts de France" },
-    { src: "/images/partners/leclerc.png", alt: "E Leclerc" },
-    { src: "/images/partners/montagny.png", alt: "Montagny en Vexin" },
-    { src: "/images/partners/montjavoult2.png", alt: "Montjavoult" },
-    { src: "/images/partners/oise.png", alt: "Département de l'Oise" },
-    { src: "/images/partners/parnes.png", alt: "Parnes" },
+    { src: "/images/partners/hauts.png", alt: "Hauts de France", link: "" },
+    { src: "/images/partners/leclerc.png", alt: "E Leclerc", link: "" },
+    {
+      src: "/images/partners/montagny.png",
+      alt: "Montagny en Vexin",
+      link: "",
+    },
+    { src: "/images/partners/montjavoult2.png", alt: "Montjavoult", link: "" },
+    {
+      src: "/images/partners/oise.png",
+      alt: "Département de l'Oise",
+      link: "",
+    },
+    { src: "/images/partners/parnes.png", alt: "Parnes", link: "" },
     {
       src: "/images/partners/sacem_auteurs.png",
       alt: "Sacem société des auteurs",
+      link: "https://www.sacem.fr/",
     },
-    { src: "/images/partners/vexinweb.png", alt: "Agence VexinWEB" },
+    {
+      src: "/images/partners/vexinweb.png",
+      alt: "Agence VexinWEB",
+      link: "https://vexinweb.fr",
+    },
   ];
 
   // Tri des images par ordre alphabétique en fonction du nom de fichier
@@ -45,7 +66,11 @@ const Partners = () => {
       const row = (
         <div key={i} className="flex justify-center space-x-4 mt-4">
           {images.slice(i * 5, (i + 1) * 5).map((image, index) => (
-            <div key={index} className="w-1/5 relative flex items-center">
+            <Link
+              href={image.link}
+              key={index}
+              className="w-1/5 relative flex items-center"
+            >
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -54,7 +79,7 @@ const Partners = () => {
                 // layout="fill"
                 style={{ objectFit: "cover" }}
               />
-            </div>
+            </Link>
           ))}
         </div>
       );
@@ -65,9 +90,9 @@ const Partners = () => {
   };
 
   return (
-    <div className="mb-24 w-full mx-auto flex flex-col border-solid border-2 border-black-100 lg:w-3/5 xl:w-2/5">
+    <div className="mb-24 pb-6 w-full mx-auto flex flex-col border-solid border-2 border-black-100 lg:w-3/5 xl:w-2/5">
       <div className="">
-        <h2 className="p-6 text-3xl font-semibold text-center lg:text-left">
+        <h2 className="p-6 text-2xl font-semibold text-center lg:text-left sm:text-4xl">
           Partenaires de l&apos;Acam
         </h2>
       </div>
@@ -77,29 +102,3 @@ const Partners = () => {
 };
 
 export default Partners;
-
-// import Image from "next/image";
-// import React from "react";
-
-// const Partners = () => {
-//   return (
-//     <div className="mb-24 w-full mx-auto flex flex-col border-solid border-2 border-black-100 lg:w-3/5 xl:w-2/5">
-//       <div className="">
-//         <h2 className="p-6 text-3xl font-semibold text-center lg:text-left">
-//           Partenaires de l&apos;Acam
-//         </h2>
-//       </div>
-//       <div className="">
-//         <Image
-//           src="/images/global/partenaires.png"
-//           alt="Partenaires"
-//           style={{ objectFit: "cover" }}
-//           width={3000}
-//           height={1000}
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Partners;

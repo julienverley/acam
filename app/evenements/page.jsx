@@ -1,6 +1,6 @@
 import React from "react";
-import CardMax from "../components/CardMax";
-import CardMaxPast from "../components/CardMaxPast";
+import CardEvent from "../components/CardEvent";
+import CardEventPast from "../components/CardEventPast";
 import dataEvents from "../mock/dataEvents";
 
 export const metadata = {
@@ -11,7 +11,7 @@ const EvenementsPage = () => {
   console.log(dataEvents);
   return (
     <div>
-      <h1 className="text-2xl text-center font-bold my-12 tracking-wide sm:text-4xl">
+      <h1 className="text-2xl text-center font-bold my-24 tracking-wide sm:text-4xl">
         Les événements de l&apos;Acam
       </h1>
       <div className="mb-24 mx-auto w-full lg:w-4/5 xl:w-3/5">
@@ -20,7 +20,7 @@ const EvenementsPage = () => {
             {event.past ? (
               // Affichage différent si past est true
               <div>
-                <CardMaxPast
+                <CardEventPast
                   src={event.src}
                   alt={event.alt}
                   title={event.title}
@@ -32,7 +32,7 @@ const EvenementsPage = () => {
             ) : (
               // Affichage par défaut pour les événements futurs
               <div>
-                <CardMax
+                <CardEvent
                   src={event.src}
                   alt={event.alt}
                   title={event.title}

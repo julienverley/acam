@@ -7,7 +7,7 @@ const LegalPage = () => {
   return (
     <div className="my-24 flex justify-center">
       <div className="max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-12">
+        <h1 className="text-3xl font-bold text-center mb-24">
           Mentions légales
         </h1>
         <ul>
@@ -19,7 +19,7 @@ const LegalPage = () => {
             <ul>
               <li>Nom de l&apos;association </li>
               <li>Siège social </li>
-              <li>Numéro de téléphone </li>
+              <li>Numéro de téléphone : 0344499807</li>
               <li>Adresse e-mail </li>
               <li>
                 Numéro d&apos;identification de l&apos;association (SIREN ou
