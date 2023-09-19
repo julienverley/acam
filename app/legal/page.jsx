@@ -5,7 +5,7 @@ export const metadata = {
 
 const LegalPage = () => {
   return (
-    <div className="my-24 flex justify-center">
+    <div className="my-24 flex justify-center px-3 sm:px-0">
       <div className="max-w-md">
         <h1 className="text-3xl font-bold text-center mb-24">
           Mentions légales
@@ -17,25 +17,38 @@ const LegalPage = () => {
             </h2>
             <br />
             <ul>
-              <li>Nom de l&apos;association </li>
-              <li>Siège social </li>
-              <li>Numéro de téléphone : 0344499807</li>
-              <li>Adresse e-mail </li>
               <li>
-                Numéro d&apos;identification de l&apos;association (SIREN ou
-                SIRET)
+                Nom de l&apos;association : Acam Association Culturelle et
+                Artistique de Montagny
               </li>
-              <li>Code APE ou NAF</li>
-              <li>Nom du président ou du responsable de la publication</li>
+              <li>
+                Siège social : 3 rue de la Molière 60240 Montagny-en-Vexin{" "}
+              </li>
+              <li>Numéro de téléphone : 0344499807</li>
+              <li>Adresse e-mail : a.c.a.montagny60240@gmail.com</li>
+              <li>
+                Numéro d&apos;identification de l&apos;association (SIRET) :
+                44101106100013
+              </li>
+              <li>Code APE : 8552Z</li>
+              <li>Immatriculation en préfecture : W60100 1607</li>
+              <li>Journal officiel : 28/11/97</li>
+              <li>Agrément JEP: 17/12/2008</li>
+              <li>INPI : 20221959</li>
+              <li>Nom de la présidente : Elisabeth Taillebrest</li>
             </ul>
           </li>
           <br />
           <li>
-            <h2 className="text-lg">Hébergement :</h2>
+            <h2 className="text-lg">Hébergement</h2>
             <br />
             <ul>
-              <li>Nom et adresse de l&apos;hébergeur du site internet</li>
-              <li>Adresse e-mail de l&apos;hébergeur</li>
+              <li>Nom de l&apos;hébergeur du site internet : LWS</li>
+              <li>
+                Adresse de l&apos;hébergeur du site internet : 10 Rue de
+                Penthièvre, 75008 Paris
+              </li>
+              <li>Adresse e-mail de l&apos;hébergeur : https://www.lws.fr/</li>
             </ul>
           </li>
           <br />
@@ -58,7 +71,41 @@ const LegalPage = () => {
             <h2 className="text-lg">Protection des données personnelles :</h2>
             <br />
             <ul>
-              <li>La politique de confidentialité de l&apos;association </li>
+              <li>
+                L&apos;Acam prend la confidentialité de vos données personnelles
+                très au sérieux. Voici un bref aperçu de notre politique :
+                <br />
+                <br />
+                Collecte de Données: nous collectons uniquement les informations
+                nécessaires à votre participation et à la fourniture de nos
+                services.
+                <br />
+                <br />
+                Utilisation des Données: vos données servent à vous informer sur
+                nos activités, à traiter vos adhésions et dons, et ne sont pas
+                partagées à des fins commerciales sans votre consentement.
+                <br />
+                <br />
+                Droit d&apos;Accès et de Rectification: vous avez le droit
+                d&apos;accéder à vos données personnelles et de demander des
+                corrections en nous contactant à a.c.a.montagny60240@gmail.com.
+                <br />
+                <br />
+                Sécurité des Données: nous prenons des mesures de sécurité pour
+                protéger vos données, mais aucune méthode n&apos;est totalement
+                infaillible.
+                <br />
+                <br />
+                Cookies: notre site peut utiliser des cookies pour améliorer
+                votre expérience en ligne. Vous pouvez les désactiver dans les
+                paramètres de votre navigateur.
+                <br />
+                <br />
+                Pour plus de détails, contactez-nous à
+                a.c.a.montagny60240@gmail.com. Cette politique peut être mise à
+                jour, alors vérifiez la date de la dernière mise à jour sur
+                notre site.
+              </li>
               <li>
                 Le droit d&apos;accès et de rectification des données
                 personnelles.
@@ -78,16 +125,6 @@ const LegalPage = () => {
             </ul>
           </li>
           <br />
-          <li>
-            <h2 className="text-lg">Cookies :</h2>
-            <br />
-            <ul>
-              <li>
-                L&apos;information sur l&apos;utilisation des cookies sur le
-                site internet
-              </li>
-            </ul>
-          </li>
         </ul>
       </div>
     </div>

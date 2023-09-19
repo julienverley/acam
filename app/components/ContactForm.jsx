@@ -6,7 +6,12 @@ import CustomSelect from "./CustomSelect";
 
 // EmployeeCreateForm gets values from the form, using Formik
 const EmployeeCreateForm = () => {
-  const [file, setFile] = useState(null);
+  const [files, setFiles] = useState([]);
+
+  const handleFileChange = (event) => {
+    const selectedFiles = Array.from(event.target.files);
+    setFiles(selectedFiles);
+  };
 
   // React-select contact subjet list:
   const subjectOptions = [
@@ -35,11 +40,18 @@ const EmployeeCreateForm = () => {
 
       // ChatGPT :
       // Vous pouvez accéder au fichier sélectionné via la variable `file`
-      const { file, ...formData } = values;
+      // const { file, ...formData } = values; //
       // Envoyer le fichier et les autres données
       // Utilisez votre méthode préférée ici (par exemple, une requête Axios ou une API fetch)
 
-      resetForm({ values: "" });
+      // Accédez au tableau de fichiers sélectionnés
+      const selectedFiles = Array.from(files);
+      // Envoyez les fichiers et les autres données au serveur
+      // Utilisez votre méthode préférée ici (par exemple, une requête Axios ou une API fetch)
+
+      resetForm();
+
+      // resetForm({ values: "" }); //
     },
   });
 
@@ -204,18 +216,31 @@ const EmployeeCreateForm = () => {
         {/* File */}
         <div className="flex flex-col w-80 mb-12">
           <label htmlFor="file" className="mb-2">
-            Envoyer une pièce jointe (optionnel)
+            Envoyer des pièces jointes (optionnel)
           </label>
           <input
-            onChange={(event) => setFile(event.target.files[0])}
+            onChange={(event) => setFiles(event.target.files[0])}
             type="file"
             id="file"
             name="file"
             accept=".jpg, .jpeg, .png, .pdf"
+            multiple
             // Cf. global.css for file-input
             className="file-input appearance-none"
           />
         </div>
+        {/*  */}
+        {/* Afficher la liste des fichiers sélectionnés */}
+        {files.length > 0 && (
+          <div>
+            <p>Fichiers sélectionnés :</p>
+            <ul>
+              {files.map((file, index) => (
+                <li key={index}>{file.name}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Submission button */}
         <div>
