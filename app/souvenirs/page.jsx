@@ -16,17 +16,27 @@ const SouvenirsPage = () => {
         <h1 className="text-2xl text-center font-bold my-24 tracking-wide sm:text-4xl">
           Souvenirs de l&apos;Acam
         </h1>
-        <div className="mb-24 mx-auto w-full lg:w-4/5 xl:w-3/5">
+        <div className="mb-24 mx-auto w-full lg:w-4/5 xl:w-3/5 ">
           {dataEvents?.map((event) => (
             <div key={event.id} className="my-6">
               {event.souvenirs ? (
                 // Affichage différent si past est true
-                <div>
-                  <h2 className="mb-3 text-md font-bold sm:text-2xl text-center">
-                    {event.title}
-                  </h2>
-                  {/* <Carousel images={images20230422} /> */}
-                  <Carousel images={event.medias} />
+                <div className="flex justify-center">
+                  {" "}
+                  <div className="max-w-md">
+                    {" "}
+                    <h2 className="mb-3 text-md font-bold sm:text-2xl text-center">
+                      {event.title}
+                    </h2>
+                    <h3 className="text-center mb-4">
+                      C&apos;était en {event.date_souvenir}
+                    </h3>
+                    <div className="max-w-sm text-left px-3 sm:px-0">
+                      {event.souvenir}
+                    </div>
+                    {/* <Carousel images={images20230422} /> */}
+                    <Carousel images={event.medias} />
+                  </div>
                 </div>
               ) : (
                 <div></div>
