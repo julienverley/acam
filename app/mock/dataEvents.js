@@ -2,6 +2,20 @@
 
 const dataEvents = [
   {
+    id: 4,
+    title: "Reprise des cours le lundi 2 octobre",
+    date: "2023 - 2024",
+    date_souvenir: "",
+    location: "Montagny-en-Vexin et Montjavoult",
+    description: "",
+    souvenir: "",
+    src: "/images/events/202305_jartdins.jpeg",
+    alt: "Reprise des cours",
+    link: "",
+    past: false,
+    souvenirs: false,
+  },
+  {
     id: 3,
     title: "Les jARTdins de Montagny",
     date: "27 et 28 mai 2023",
@@ -36,7 +50,7 @@ const dataEvents = [
     },
     alt: "Affiche du théatre Feydeau",
     link: "",
-    past: false,
+    past: true,
     souvenirs: true,
   },
   {
@@ -49,11 +63,12 @@ const dataEvents = [
     souvenir: "",
     src: "/images/events/20230325_baroque.jpg",
     medias: {
-      src1: "/images/souvenirs/20230325/1.jpg",
+      src1: "/images/events/20230325_baroque.jpg",
       src2: "/images/souvenirs/20230325/2.jpg",
       src3: "/images/souvenirs/20230325/3.jpg",
       src4: "/images/souvenirs/20230325/4.jpg",
       src5: "/images/souvenirs/20230325/5.jpg",
+      src6: "/images/souvenirs/20230325/1.jpg",
     },
     alt: "Soirée baroque",
     link: "",
@@ -76,6 +91,7 @@ export default dataEvents;
     src: "/images/events/20230325_baroque.jpg",
     alt: "Soirée baroque",
     link: "",
-    past: true,
+    past: false,
+    souvenirs: false,
   },
  */
