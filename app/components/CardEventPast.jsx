@@ -46,13 +46,13 @@ const CardEventPast = ({ title, date, location, src, alt, description }) => {
         <div className="text-black px-0 mt-3 sm:px-3 md:mt-0 md:w-1/2">
           <h3 className="mb-3 ml-7 text-md font-bold sm:text-2xl">{title}</h3>
           <div className="flex gap-2 items-center">
-            <div className="w-6 h-10 flex items-center">
+            <div className="w-6 h-10 flex items-center text-gray-400">
               <ScheduleIcon />
             </div>
             <h4 className="text-md my-3 sm:text-md">{date}</h4>
           </div>
           <div className="flex gap-2 items-center">
-            <div className="w-6 h-10 flex items-center">
+            <div className="w-6 h-10 flex items-center text-gray-400">
               <PlaceIcon />
             </div>
             <h4 className="text-md my-2 sm:text-md">{location}</h4>

@@ -33,7 +33,6 @@ const CardCourse = ({
 
   return (
     <div>
-      {/* <div className="absolute -rotate-3 opacity-75 z-10 bg-yellow-300 h-10 py-8 px-6 drop-shadow-2xl flex items-center"> */}
       <div className="absolute opacity-75 z-10 bg-yellow-300 h-10 py-8 px-6 drop-shadow-2xl flex items-center">
         Il reste des places
       </div>
@@ -44,19 +43,19 @@ const CardCourse = ({
           style={{ cursor: "pointer" }}
         >
           <Image
-            // className={`h-96 ${isImageExpanded ? "h-full" : ""}`}
-            className="h-96"
+            // className="h-96"
+            className="h-48 sm:h-96"
             src={src}
             alt={alt}
             width={800}
             height={500}
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="text-black px-0 mt-3 sm:px-3 md:mt-0 md:w-1/2 flex flex-col justify-center">
           <h3 className="mb-3 ml-7 text-md font-bold sm:text-2xl">{title}</h3>
           <div className="flex gap-2 items-center">
-            <div className="w-6 h-10 flex items-center">
+            <div className="w-6 h-10 flex items-center text-gray-400">
               <ScheduleIcon />
             </div>
             <div className="">
@@ -66,11 +65,12 @@ const CardCourse = ({
             </div>
           </div>
           <div className="flex gap-2 items-center">
-            <div className="w-6 h-10 flex items-center">
+            <div className="w-6 h-10 flex items-center text-gray-400">
               <PlaceIcon />
             </div>
             <h4 className="text-md my-1 sm:text-md">{location}</h4>
           </div>
+          {/* <p className="mt-3 ml-7 text-md sm:text-base"> */}
           <p className="mt-3 ml-7 text-sm sm:text-base">
             {descriptionWithLineBreaks}
           </p>
