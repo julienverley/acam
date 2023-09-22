@@ -11,7 +11,8 @@ const RejoindrePage = () => {
     <div className="my-24 flex justify-center px-3 sm:px-0">
       <div className="max-w-md">
         <h1 className="text-3xl font-bold text-center mb-24">L&apos;Acam</h1>
-        <div className="mb-24 text-left mx-auto w-full lg:w-3/5 xl:w-2/5">
+        {/* <div className="mb-24 text-left mx-auto w-full lg:w-3/5 xl:w-2/5"> */}
+        <div className="">
           <p className="">
             L&apos;Acam, Association Culturelle et Artistique de
             Montagny-en-Vexin, existe depuis 1997.
