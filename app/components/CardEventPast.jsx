@@ -44,7 +44,9 @@ const CardEventPast = ({ title, date, location, src, alt, description }) => {
           />
         </div>
         <div className="text-black px-0 mt-3 sm:px-3 md:mt-0 md:w-1/2">
-          <h3 className="mb-3 ml-7 text-md font-bold sm:text-2xl">{title}</h3>
+          <h3 className="mb-3 text-md font-bold sm:text-2xl md:ml-7">
+            {title}
+          </h3>
           <div className="flex gap-2 items-center">
             <div className="w-6 h-10 flex items-center text-gray-400">
               <ScheduleIcon />
@@ -57,9 +59,8 @@ const CardEventPast = ({ title, date, location, src, alt, description }) => {
             </div>
             <h4 className="text-md my-2 sm:text-md">{location}</h4>
           </div>
-          <p className="mt-3 ml-7 text-sm sm:text-base">
-            {descriptionWithLineBreaks}
-          </p>
+          {/* <p className="mt-3 ml-7 text-sm sm:text-base"> */}
+          <p className="mt-3 text-base md:ml-7">{descriptionWithLineBreaks}</p>
         </div>
       </div>
     </div>

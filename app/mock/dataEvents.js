@@ -2,6 +2,21 @@
 
 const dataEvents = [
   {
+    id: 5,
+    title: "Les jARTdins de Montagny",
+    date: "mai 2024",
+    date_souvenir: "mai 2024",
+    location: "Le village",
+    description:
+      "C'est la 21e édition de cette manifestation organisée par l'Acam qui accueille près de 5000 visiteurs. \n Depuis 21 ans, attirant un large public de tous horizons, l’événement « les jARTdins de Montagny » est un rendez-vous incontournable du printemps. \nLe village de Montagny-en-Vexin accueille dans ses jardins les réalisations d’artistes plasticiens désirant trouver des lieux d’expositions non conventionnels. \nCroisée des chemins entre l’Ile de France et la Normandie, Montagny-en-Vexin est une porte d’entrée des Hauts-de-France où cette « grande promenade des Arts » démontre le dynamisme et la créativité de nos artistes. \nDurant tout le week-end : des moments musicaux, de danse, de chants, de théâtre... à découvrir.",
+    souvenir: "",
+    src: "/images/events/202305_jartdins.jpeg",
+    alt: "jARTdins de Montagny 2024",
+    link: "https://www.lesjartdinsdemontagny.fr/index.html",
+    past: false,
+    souvenirs: false,
+  },
+  {
     id: 4,
     title: "Reprise des cours le lundi 2 octobre",
     date: "2023 - 2024",
@@ -27,7 +42,7 @@ const dataEvents = [
     src: "/images/events/202305_jartdins.jpeg",
     alt: "jARTdins de Montagny 2023",
     link: "https://www.lesjartdinsdemontagny.fr/index.html",
-    past: false,
+    past: true,
     souvenirs: false,
   },
   {
@@ -89,6 +104,18 @@ export default dataEvents;
     description: "",
     souvenir: "",
     src: "/images/events/20230325_baroque.jpg",
+    medias: {
+      src1: "/images/events/",
+      src2: "/images/souvenirs/",
+      src3: "/images/souvenirs/",
+      src4: "/images/souvenirs/",
+      src5: "/images/souvenirs/",
+      src6: "/images/souvenirs/",
+      src7: "/images/souvenirs/",
+      src8: "/images/souvenirs/",
+      src9: "/images/souvenirs/",
+      src10: "/images/souvenirs/",
+    },
     alt: "Soirée baroque",
     link: "",
     past: false,

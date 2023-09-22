@@ -112,20 +112,13 @@ const Navbar = () => {
                 Page d&lsquo;accueil
               </button>
             </Link>
-            <Link href="/rejoindre">
-              <button
+            <Link href="/cours">
+              <li
+                // className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
                 className="p-5 m-1 text-white bg-zinc-800/80 hover:bg-zinc-800"
                 onClick={handleMenuItemClick}
               >
-                Rejoindre l&lsquo;association
-              </button>
-            </Link>
-            <Link href="/cours">
-              <li
-                className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
-                onClick={handleMenuItemClick}
-              >
-                Cours
+                Cours disponibles
               </li>
             </Link>
             <Link href="/evenements">
@@ -144,12 +137,21 @@ const Navbar = () => {
                 Souvenirs
               </li>
             </Link>
+            <Link href="/rejoindre">
+              <button
+                // className="p-5 m-1 text-white bg-zinc-800/80 hover:bg-zinc-800"
+                className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
+                onClick={handleMenuItemClick}
+              >
+                Nous rejoindre
+              </button>
+            </Link>
             <a target="_blank" href="https://www.lesjartdinsdemontagny.fr/">
               <li
                 className="p-5 m-1 hover:bg-zinc-800 hover:text-white"
                 onClick={handleMenuItemClick}
               >
-                JARTdins
+                J&apos;ARTdins
               </li>{" "}
             </a>
           </ul>

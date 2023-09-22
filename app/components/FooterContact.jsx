@@ -15,7 +15,6 @@ const Contact = () => {
         </div>
         <div className="flex items-center">Formulaire de contact</div>
       </Link>
-
       <a className="flex gap-2" href="tel:0344499807">
         <div className="w-6 h-10 flex items-center">
           <PhoneIcon />

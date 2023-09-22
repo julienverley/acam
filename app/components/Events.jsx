@@ -15,7 +15,7 @@ const Events = () => {
         <div className="gap-y-6 justify-between max-h-auto mx-auto lg:h-64 lg:gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {/* Title & button */}
           <div className="flex flex-col justify-between h-48 col-span-1 lg:h-48">
-            <h2 className="text-2xl font-semibold text-center lg:text-left sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-center lg:text-left">
               {isPlural ? "Événements" : "Événement"} à venir
             </h2>
             <button className="p-6 text-white bg-zinc-800/80 hover:bg-zinc-800">
