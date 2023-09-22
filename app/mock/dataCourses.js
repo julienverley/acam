@@ -12,7 +12,7 @@ const dataCourses = [
     src: "/images/courses/batterie.jpg",
     alt: "battery, Image by natanaelginting on Freepik",
     link: "",
-    full: false,
+    full: true,
   },
   {
     id: 2,
