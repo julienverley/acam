@@ -56,7 +56,7 @@ const RejoindrePage = () => {
             culturelle et artistique de qualité dans une ambiance conviviale.
           </p>
           <br />
-          <div className="my-24 flex justify-center">
+          <div className="mt-12 flex justify-center">
             <div className="max-w-md">
               <div className="text-center mb-12">
                 {/* <h1>Bulletin d&apos;adhésion à télécharger</h1> */}
@@ -66,6 +66,13 @@ const RejoindrePage = () => {
                 </Link>
               </div>
               <ContactForm />
+              <div className="text-center mt-24">
+                {/* <h1>Bulletin d&apos;adhésion à télécharger</h1> */}
+                {/* <p>Voici un lien pour télécharger le fichier PDF :</p> */}
+                <Link target="_blank" href="/pdf/2023_adhesion.pdf" download>
+                  Télécharger le bulletin d&apos;adhésion à l&apos;Acam en PDF
+                </Link>
+              </div>
             </div>
           </div>
           {/* <div>Redirection vers le formulaire de contact</div> */}
