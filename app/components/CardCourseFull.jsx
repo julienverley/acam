@@ -45,18 +45,21 @@ const CardCourseFull = ({
           <Image
             // SEO: disable(d) grayscale?
             // className={`h-96 grayscale ${isImageExpanded ? "h-full" : ""}`}
-            className="h-96 grayscale"
+            // className="h-96 grayscale"
+            className="h-48 sm:h-96 grayscale"
             src={src}
             alt={alt}
             width={800}
             height={500}
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="text-black px-0 mt-3 sm:px-3 md:mt-0 md:w-1/2 flex flex-col justify-center">
-          <h3 className="mb-3 ml-8 text-md font-bold sm:text-2xl">{title}</h3>
+          <h3 className="mb-3 text-md font-bold sm:text-2xl md:ml-8">
+            {title}
+          </h3>
           <div className="flex gap-2 items-center">
-            <div className="w-6 h-10 flex items-center">
+            <div className="w-6 h-10 flex items-center text-gray-400">
               <ScheduleIcon />
             </div>
             <div className="">
@@ -66,14 +69,12 @@ const CardCourseFull = ({
             </div>
           </div>
           <div className="flex gap-2 items-center">
-            <div className="w-6 h-10 flex items-center">
+            <div className="w-6 h-10 flex items-center text-gray-400">
               <PlaceIcon />
             </div>
             <h4 className="text-md my-2 sm:text-md">{location}</h4>
           </div>
-          <p className="mt-3 ml-8 text-sm sm:text-base">
-            {descriptionWithLineBreaks}
-          </p>
+          <p className="mt-3 text-base md:ml-8">{descriptionWithLineBreaks}</p>
         </div>
       </div>
     </div>

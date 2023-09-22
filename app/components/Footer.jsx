@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container-none h-44 py-2 mx-auto flex flex-col justify-between items-center px-6 bg-yellow-300 text-black text-xs md:flex-row md:space-y-0 md:h-24 md:text-base">
         {/* Copyright */}
         <Link href="/legal">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 h-10">
             <CopyrightIcon />
             {/* <div className="w-48">Copyright 2023</div> */}
             <div className="">Mentions légales</div>
@@ -22,7 +22,7 @@ const Footer = () => {
         </Link>
         {/* Mentions légales */}
         <Link href="/reglement">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 h-10">
             <BalanceIcon />
             {/* <div className="w-48">Copyright 2023</div> */}
             <div className="">Règlement</div>
@@ -30,14 +30,14 @@ const Footer = () => {
         </Link>
         {/* FAQ */}
         <Link href="/questions">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 h-10">
             <HelpCenterIcon />
             {/* <div className="w-48">Copyright 2023</div> */}
             <div className="">Questions fréquentes</div>
           </div>
         </Link>
         <a
-          className="flex items-center"
+          className="flex items-center gap-2 h-10"
           target="_blank"
           href="https://vexinweb.fr/"
         >
