@@ -23,6 +23,7 @@ const EvenementsPage = () => {
                 <CardEventPast
                   src={event.src}
                   alt={event.alt}
+                  link={event.link}
                   title={event.title}
                   date={event.date}
                   location={event.location}
@@ -35,6 +36,7 @@ const EvenementsPage = () => {
                 <CardEvent
                   src={event.src}
                   alt={event.alt}
+                  link={event.link}
                   title={event.title}
                   date={event.date}
                   location={event.location}
