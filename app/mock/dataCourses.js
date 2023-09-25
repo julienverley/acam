@@ -50,7 +50,7 @@ const dataCourses = [
     date3: "Mercredi toute la journée",
     location: "Montagny-en-Vexin",
     description: "Cours individuels de 30 min pour tout public, georges ALIN",
-    src: "/images/courses/b.jpg",
+    src: "/images/courses/piano.jpg",
     alt: "piano",
     link: "",
     full: false,
