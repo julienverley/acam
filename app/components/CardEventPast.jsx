@@ -3,8 +3,17 @@ import React, { useState } from "react";
 import Image from "next/image";
 import PlaceIcon from "@mui/icons-material/Place";
 import ScheduleIcon from "@mui/icons-material/Schedule";
+import Link from "next/link";
 
-const CardEventPast = ({ title, date, location, src, alt, description }) => {
+const CardEventPast = ({
+  title,
+  date,
+  location,
+  src,
+  alt,
+  link,
+  description,
+}) => {
   const [isImageExpanded, setIsImageExpanded] = useState(false);
 
   const handleImageClick = () => {
@@ -43,7 +52,11 @@ const CardEventPast = ({ title, date, location, src, alt, description }) => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="text-black px-0 mt-3 sm:px-3 md:mt-0 md:w-1/2">
+        <Link
+          href={link}
+          target="blank"
+          className="text-black px-0 mt-3 sm:px-3 md:mt-0 md:w-1/2"
+        >
           <h3 className="mb-3 text-md font-bold sm:text-2xl md:ml-7">
             {title}
           </h3>
@@ -61,7 +74,7 @@ const CardEventPast = ({ title, date, location, src, alt, description }) => {
           </div>
           {/* <p className="mt-3 ml-7 text-sm sm:text-base"> */}
           <p className="mt-3 text-base md:ml-7">{descriptionWithLineBreaks}</p>
-        </div>
+        </Link>
       </div>
     </div>
   );
