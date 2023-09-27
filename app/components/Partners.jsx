@@ -45,7 +45,7 @@ const Partners = () => {
       link: "https://www.sacem.fr/",
     },
     {
-      src: "/images/partners/vexinweb.png",
+      src: "/images/partners/vexinweb_2.png",
       alt: "Agence VexinWEB",
       link: "https://vexinweb.fr",
     },
