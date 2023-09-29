@@ -12,7 +12,7 @@ const dataCourses = [
     src: "/images/courses/batterie.jpg",
     alt: "battery, Image by natanaelginting on Freepik",
     link: "",
-    full: true,
+    full: false,
   },
   {
     id: 2,
@@ -116,7 +116,7 @@ const dataCourses = [
     date2: "",
     date3: "",
     location: "Salle de danse, rue de la Fontaine à Montagny-en-Vexin",
-    description: "Cours collectif d'une heure pour tout public",
+    description: "Cours collectif d'une heure pour tout public, Hanaé LAURENS",
     src: "/images/courses/gym.png",
     alt: "gym, People illustrations by Storyset",
     link: "",
