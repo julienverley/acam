@@ -37,7 +37,7 @@ const EmployeeCreateForm = () => {
     validationSchema: yupValidationSchema,
     onSubmit: (values, { resetForm, setSubmitting }) => {
       setSubmitting(true);
-
+      // fetch("/api/email")
       // ChatGPT :
       // Vous pouvez accéder au fichier sélectionné via la variable `file`
       // const { file, ...formData } = values; //
