@@ -19,8 +19,8 @@ export async function POST(request) {
   });
 
   const messageContent =
-    "Nouvelle soumission de formulaire de contact depuis le site web de l'Acam :\n\n" +
-    "Détails du contact :\n" +
+    "Nouvelle soumission de formulaire de contact depuis le site de l'Acam :\n\n" +
+    "Détails du contact :\n\n" +
     "Nom : " +
     firstname +
     " " +
@@ -38,8 +38,8 @@ export async function POST(request) {
 
   const mailOptions = {
     from: "a.c.a.montagny60240@gmail.com",
-    to: "contact@vexinweb.fr",
-    // cc: email, (uncomment this line if you want to send a copy to the sender)
+    to: "a.c.a.montagny60240@gmail.com",
+    cc: "contact@vexinweb.fr",
     subject: `Message depuis le site de l'ACAM de ${firstname} ${lastname} (${email})`,
     text: messageContent,
   };
