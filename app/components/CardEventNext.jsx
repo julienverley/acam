@@ -7,7 +7,7 @@ const CardEventNext = ({ src, alt, link }) => {
     <div>
       <Link href={link} target="blank">
         <h2 className="text-3xl text-center font-bold mb-12 tracking-wide sm:text-4xl">
-          Prochain événement
+          L&apos;événement
         </h2>
         <div className="">
           <Image src={src} alt={alt} width={1200} height={2000} />

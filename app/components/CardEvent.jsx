@@ -25,9 +25,9 @@ const CardEvent = ({ title, date, location, src, alt, link, description }) => {
     <div>
       {/* <div className="absolute z-10 bg-yellow-300 h-10 py-5 px-4 drop-shadow-2xl flex items-center"> */}
       {/* <div className="absolute -rotate-3 opacity-75 z-10 bg-yellow-300 h-10 py-8 px-6 drop-shadow-2xl flex items-center"> */}
-      <div className="absolute opacity-75 z-10 bg-yellow-300 h-10 py-8 px-6 drop-shadow-2xl flex items-center">
+      {/* <div className="absolute opacity-75 z-10 bg-yellow-300 h-10 py-8 px-6 drop-shadow-2xl flex items-center">
         Événement à venir
-      </div>
+      </div> */}
       <div className="h-auto flex flex-col my-12 bg-white p-6 md:flex-row">
         <div
           className="flex items-center border-4 border-yellow-100 md:w-1/2"
