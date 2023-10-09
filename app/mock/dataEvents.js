@@ -8,7 +8,7 @@ const dataEvents = [
     date_souvenir: "",
     location: "Montagny-en-Vexin et Montjavoult",
     description:
-      "Les cours de l'Acam reprennent le lundi 2 octobre 2023. Visitez l'onglet Cours disponibles de notre site web pour choisir vos cours. Vous pourrez y télécharger les bulletins d'adhésion et de souscription, puis nous les renvoyer remplis via notre formulaire de contact.",
+      "Les cours de l'Acam reprennent le lundi 2 octobre 2023. Visitez l'onglet Cours disponibles de notre site web pour choisir vos cours. Vous pourrez y télécharger les bulletins d'adhésion et de souscription, puis nous les renvoyer remplis.",
     souvenir: "",
     src: "/images/events/202310_reprise_facon_julien_2.jpg",
     alt: "Reprise des cours",

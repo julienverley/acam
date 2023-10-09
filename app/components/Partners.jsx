@@ -12,13 +12,13 @@ const Partners = () => {
     },
     {
       src: "/images/partners/courcelles_les_gisors4.png",
-      alt: "Auprès de mon arbre",
+      alt: "Courcelles les Gisors",
       link: "",
     },
     {
       src: "/images/partners/dumas.png",
       alt: "Dumas piano",
-      link: "",
+      link: "https://www.lespianosduvexin.fr/",
     },
     {
       src: "/images/partners/guillemette.png",
@@ -70,6 +70,8 @@ const Partners = () => {
               href={image.link}
               key={index}
               className="w-1/5 relative flex items-center"
+              target="_blank"
+              cursor="pointer"
             >
               <Image
                 src={image.src}
