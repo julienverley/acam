@@ -37,7 +37,7 @@ export async function POST(request) {
     "\n\n";
 
   const mailOptions = {
-    from: "a.c.a.montagny60240@gmail.com",
+    from: "acam@vexinweb.fr",
     to: "a.c.a.montagny60240@gmail.com",
     cc: "contact@vexinweb.fr",
     subject: `Message depuis le site de l'ACAM de ${firstname} ${lastname} (${email})`,
