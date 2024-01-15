@@ -2,6 +2,39 @@
 
 const dataEvents = [
   {
+    id: 4,
+    title: "Récital de piano",
+    date: "Samedi 16 mars à 20h30",
+    date_souvenir: "mars 2024",
+    location: "Salle polyvalente de Montagny-en-Vexin",
+    description: `C’est en 2005, âgé de 5 ans, que le jeune pianiste Novak Defrance découvre ses premières touches à l’Acam avec Nicolas Dumas. 
+      
+    Deuxième prix du concours «Piano-Neuchâtel-Val de Travers 2021», étudiant dans la classe de Florent Boffard au Conservatoire de Musique et de Danse à Paris`,
+    souvenir: "",
+    src: "/images/events/20240316_novak.jpg",
+    alt: "Récital de piano",
+    link: "/evenements",
+    levenement: false,
+    past: false,
+    souvenirs: false,
+  },
+  {
+    id: 3,
+    title: "Théâtre L'horloge de pépé Kondy",
+    date: "Samedi 17 février à 20h30",
+    date_souvenir: "février 2024",
+    location: "Salle polyvalente de Montagny-en-Vexin",
+    description:
+      "« Ces souvenirs trahis par le temps sont maintenant des mensonges. Je remonte l’horloge de pépé Kondy tous les dimanches…»",
+    souvenir: "",
+    src: "/images/events/20240212_theatre.jpeg",
+    alt: "L'horloge de pépé Kondy",
+    link: "/evenements",
+    levenement: true,
+    past: false,
+    souvenirs: false,
+  },
+  {
     id: 2,
     title: "Reprise des cours",
     date: "2023 - 2024",
@@ -13,7 +46,7 @@ const dataEvents = [
     src: "/images/events/202310_reprise_facon_julien_2.jpg",
     alt: "Reprise des cours",
     link: "/cours",
-    past: false,
+    past: true,
     souvenirs: false,
   },
   {
