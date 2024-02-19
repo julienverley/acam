@@ -10,7 +10,7 @@ const Hero = () => {
       </h1>
       <Link href={"/rejoindre"}>
         {/* Hero ordinaire */}
-        {/* <div className="mb-24 mx-auto w-full lg:w-3/5">
+        <div className="mb-24 mx-auto w-full lg:w-3/5">
           <Image
             src="/images/global/hero.jpg"
             alt="hero"
@@ -18,9 +18,9 @@ const Hero = () => {
             width={3000}
             height={1000}
           />
-        </div> */}
+        </div>
         {/* Hero voeux 2024 */}
-        <div className="mb-24 mx-auto w-full lg:w-3/5">
+        {/* <div className="mb-24 mx-auto w-full lg:w-3/5">
           <Image
             src="/images/global/voeux_2024.jpeg"
             alt="voeux"
@@ -28,7 +28,7 @@ const Hero = () => {
             width={3000}
             height={1000}
           />
-        </div>
+        </div> */}
       </Link>
     </div>
   );
