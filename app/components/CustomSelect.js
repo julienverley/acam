@@ -21,7 +21,8 @@ const CustomSelect = ({
     }),
     container: (provided) => ({
       ...provided,
-      width: "20rem",
+      width: "16rem",
+      // width: "20rem",
       height: "2rem",
       // borderRadius: 10,
       // border: "2px solid rgb(253 224 71)",

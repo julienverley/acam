@@ -1,18 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import yupValidationSchema from "../schemas/yupValidationSchema";
 import CustomSelect from "./CustomSelect";
+import { useRouter } from "next/navigation"; // Importez useRouter depuis next/navigation
 
-// EmployeeCreateForm gets values from the form, using Formik
-const EmployeeCreateForm = () => {
-  const [files, setFiles] = useState([]);
-
-  const handleFileChange = (event) => {
-    const selectedFiles = Array.from(event.target.files);
-    setFiles(selectedFiles);
-  };
-
+// ContactForm gets values from the form, using Formik
+const ContactForm = () => {
   // React-select contact subjet list:
   const subjectOptions = [
     { value: "rejoindre l'association", label: "Rejoindre l'association" },
@@ -23,6 +17,10 @@ const EmployeeCreateForm = () => {
     { value: "jartdins", label: "Informations sur les jARTdins" },
     { value: "autre", label: "Autre sujet" },
   ];
+
+  const router = useRouter(); // Initialisez useRouter
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -36,225 +34,239 @@ const EmployeeCreateForm = () => {
     },
     validationSchema: yupValidationSchema,
     onSubmit: (values, { resetForm, setSubmitting }) => {
+      // Empêcher la soumission multiple
+      if (isSubmitting) {
+        return;
+      }
       setSubmitting(true);
 
-      // ChatGPT :
-      // Vous pouvez accéder au fichier sélectionné via la variable `file`
-      // const { file, ...formData } = values; //
-      // Envoyer le fichier et les autres données
-      // Utilisez votre méthode préférée ici (par exemple, une requête Axios ou une API fetch)
+      // Effectuer la requête POST vers la route email.js
+      fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values), // Envoyez les données du formulaire au format JSON
+      })
+        .then((response) => {
+          if (response.ok) {
+            // La requête a réussi
+            console.log("E-mail envoyé avec succès");
+            // Vous pouvez réinitialiser le formulaire ou afficher un message de succès ici
 
-      // Accédez au tableau de fichiers sélectionnés
-      const selectedFiles = Array.from(files);
-      // Envoyez les fichiers et les autres données au serveur
-      // Utilisez votre méthode préférée ici (par exemple, une requête Axios ou une API fetch)
+            // Réinitialisez le formulaire après la réussite
+            resetForm();
 
-      resetForm();
-
-      // resetForm({ values: "" }); //
+            // Naviguez vers une page de confirmation ou toute autre page si nécessaire
+            router.push("/confirmation"); // Remplacez "/confirmation" par votre chemin de page de confirmation
+          } else {
+            // La requête a échoué
+            console.error("Erreur lors de l'envoi de l'e-mail");
+            // Vous pouvez afficher un message d'erreur ici
+          }
+        })
+        .catch((error) => {
+          console.error("Erreur lors de la requête POST :", error);
+          // Gérez les erreurs ici
+        })
+        .finally(() => {
+          setIsSubmitting(false);
+        });
     },
   });
 
   return (
     <>
-      <h1 className="text-3xl font-bold text-center mb-24">
+      <h1 className="text-3xl font-bold text-center mb-24 mt-24">
         Formulaire de contact
       </h1>
-      <form onSubmit={formik.handleSubmit} autoComplete="off" className="">
-        {/* First name */}
-        <div className=" mb-3">
-          <div className="flex flex-col w-80">
-            {" "}
-            <label htmlFor="firstName" className="mb-2">
-              Prénom
-            </label>
-            <input
-              value={formik.values.firstname}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              type="text"
-              id="firstname"
-              name="firstname"
-              className={
-                formik.errors.firstname && formik.touched.firstname
-                  ? "focus:outline-none h-8 border-2 border-rose-400"
-                  : "focus:outline-none border-2 border-white"
-              }
-            />
-          </div>
-          {formik.errors.firstname && formik.touched.firstname && (
-            <p className="text-rose-400 text-xs my-2">
-              {formik.errors.firstname}
-            </p>
-          )}
-        </div>
+      <div>
+        {/* 1/ send via contact form */}
+        <div className="flex justify-center items-center bg-gray-200 py-12">
+          <form onSubmit={formik.handleSubmit} autoComplete="off" className="">
+            {/* First name */}
+            <div className=" mb-3">
+              <div className="flex flex-col w-64">
+                {" "}
+                <label htmlFor="firstName" className="mb-2">
+                  Prénom
+                </label>
+                <input
+                  value={formik.values.firstname}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  className={
+                    formik.errors.firstname && formik.touched.firstname
+                      ? "px-2 focus:outline-none h-8 border-2 border-rose-400"
+                      : "px-2 focus:outline-none border-2 border-white"
+                  }
+                />
+              </div>
+              {formik.errors.firstname && formik.touched.firstname && (
+                <p className="text-rose-400 text-xs my-2">
+                  {formik.errors.firstname}
+                </p>
+              )}
+            </div>
+            {/* Last name */}
+            <div className=" mb-3">
+              <div className="flex flex-col w-64">
+                {" "}
+                <label htmlFor="lastname" className="mb-2">
+                  Nom
+                </label>
+                <input
+                  value={formik.values.lastname}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  className={
+                    formik.errors.lastname && formik.touched.lastname
+                      ? "px-2 focus:outline-none h-8 border-2 border-rose-400"
+                      : "px-2 focus:outline-none border-2 border-white"
+                  }
+                />
+              </div>
+              {formik.errors.lastname && formik.touched.lastname && (
+                <p className="text-rose-400 text-xs my-2">
+                  {formik.errors.lastname}
+                </p>
+              )}
+            </div>
 
-        {/* Last name */}
-        <div className=" mb-3">
-          <div className="flex flex-col w-80">
-            {" "}
-            <label htmlFor="lastname" className="mb-2">
-              Nom
-            </label>
-            <input
-              value={formik.values.lastname}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              type="text"
-              id="lastname"
-              name="lastname"
-              className={
-                formik.errors.lastname && formik.touched.lastname
-                  ? "focus:outline-none h-8 border-2 border-rose-400"
-                  : "focus:outline-none border-2 border-white"
-              }
-            />
-          </div>
-          {formik.errors.lastname && formik.touched.lastname && (
-            <p className="text-rose-400 text-xs my-2">
-              {formik.errors.lastname}
-            </p>
-          )}
-        </div>
+            {/* Email */}
+            <div className=" mb-3">
+              <div className="flex flex-col w-64">
+                {" "}
+                <label htmlFor="email" className="mb-2">
+                  Courriel
+                </label>
+                <input
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  type="text"
+                  id="email"
+                  name="email"
+                  className={
+                    formik.errors.email && formik.touched.email
+                      ? "px-2 focus:outline-none h-8 border-2 border-rose-400"
+                      : "px-2 focus:outline-none border-2 border-white"
+                  }
+                />
+              </div>
+              {formik.errors.email && formik.touched.email && (
+                <p className="text-rose-400 text-xs my-2">
+                  {formik.errors.email}
+                </p>
+              )}
+            </div>
 
-        {/* Email */}
-        <div className=" mb-3">
-          <div className="flex flex-col w-80">
-            {" "}
-            <label htmlFor="email" className="mb-2">
-              Courriel
-            </label>
-            <input
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              type="text"
-              id="email"
-              name="email"
-              className={
-                formik.errors.email && formik.touched.email
-                  ? "focus:outline-none h-8 border-2 border-rose-400"
-                  : "focus:outline-none border-2 border-white"
-              }
-            />
-          </div>
-          {formik.errors.email && formik.touched.email && (
-            <p className="text-rose-400 text-xs my-2">{formik.errors.email}</p>
-          )}
-        </div>
+            {/* Phone number */}
+            <div className=" mb-3">
+              <div className="flex flex-col w-64">
+                {" "}
+                <label htmlFor="phone" className="mb-2">
+                  Numéro de téléphone
+                </label>
+                <input
+                  value={formik.values.phone}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  className={
+                    formik.errors.phone && formik.touched.phone
+                      ? "px-2 focus:outline-none h-8 border-2 border-rose-400"
+                      : "px-2 focus:outline-none h-8 border-2 border-white"
+                  }
+                />
+              </div>
+              {formik.errors.phone && formik.touched.phone && (
+                <p className="text-rose-400 text-xs my-2">
+                  {formik.errors.phone}
+                </p>
+              )}
+            </div>
 
-        {/* Phone number */}
-        <div className=" mb-3">
-          <div className="flex flex-col w-80">
-            <label htmlFor="phone" className="mb-2">
-              Numéro de téléphone
-            </label>
-            <input
-              value={formik.values.phone}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              type="text"
-              id="phone"
-              name="phone"
-              className={
-                formik.errors.phone && formik.touched.phone
-                  ? "focus:outline-none h-8 border-2 border-rose-400"
-                  : "focus:outline-none h-8 border-2 border-white"
-              }
-            />
-          </div>
-          {formik.errors.phone && formik.touched.phone && (
-            <p className="text-rose-400 text-xs my-2">{formik.errors.phone}</p>
-          )}
-        </div>
+            {/* Message */}
+            <div className="mb-9">
+              {/* Subject message */}
+              <div className="flex flex-col w-64">
+                <label htmlFor="subject" className="mb-2">
+                  Sujet du message
+                </label>
+                <CustomSelect
+                  options={subjectOptions}
+                  values={formik.values.subject}
+                  value={formik.values.subject}
+                  defaultValue={subjectOptions[0]}
+                  onChange={(value) =>
+                    formik.setFieldValue("subject", value.value)
+                  }
+                  onBlur={formik.handleBlur}
+                  type="text"
+                  id="subject"
+                  name="subject"
+                />
+              </div>
+              {/* Input message */}
+              <div className="flex flex-col w-64">
+                <label htmlFor="message" className="my-2">
+                  Message
+                </label>
+                <textarea
+                  value={formik.values.message}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  id="message"
+                  name="message"
+                  rows="5"
+                  className={
+                    formik.errors.message && formik.touched.message
+                      ? "px-2 focus:outline-none border-2 border-rose-400"
+                      : "px-2 focus:outline-none border-2 border-white"
+                  }
+                />
+              </div>
+              {formik.errors.message && formik.touched.message && (
+                <p className="text-rose-400 text-xs my-2">
+                  {formik.errors.message}
+                </p>
+              )}
+            </div>
 
-        {/* Message */}
-        <div className="mb-9">
-          {/* Subject message */}
-          <div className="flex flex-col w-80 mb-3">
-            <label htmlFor="subject" className="mb-2">
-              Sujet du message
-            </label>
-            <CustomSelect
-              options={subjectOptions}
-              values={formik.values.subject}
-              value={formik.values.subject}
-              defaultValue={subjectOptions[0]}
-              onChange={(value) => formik.setFieldValue("subject", value.value)}
-              onBlur={formik.handleBlur}
-              type="text"
-              id="subject"
-              name="subject"
-            />
-          </div>
-          {/* Input message */}
-          <div className="flex flex-col w-80 mb-3">
-            <label htmlFor="message" className="mb-2">
-              Message
-            </label>
-            <textarea
-              value={formik.values.message}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              id="message"
-              name="message"
-              rows="5"
-              className={
-                formik.errors.message && formik.touched.message
-                  ? "focus:outline-none border-2 border-rose-400"
-                  : "focus:outline-none border-2 border-white"
-              }
-            />
-          </div>
-          {formik.errors.message && formik.touched.message && (
-            <p className="text-rose-400 text-xs my-2">
-              {formik.errors.message}
-            </p>
-          )}
+            {/* Submission button */}
+            <div>
+              <button
+                className="w-64 p-5 text-white bg-zinc-800/80 hover:bg-zinc-800"
+                disabled={formik.isSubmitting}
+                type="submit"
+              >
+                Envoyer un message
+                <br /> via le formulaire
+              </button>
+            </div>
+          </form>
         </div>
-
-        {/* File */}
-        <div className="flex flex-col w-80 mb-12">
-          <label htmlFor="file" className="mb-2">
-            Envoyer des pièces jointes (optionnel)
-          </label>
-          <input
-            onChange={(event) => setFiles(event.target.files[0])}
-            type="file"
-            id="file"
-            name="file"
-            accept=".jpg, .jpeg, .png, .pdf"
-            multiple
-            // Cf. global.css for file-input
-            className="file-input appearance-none"
-          />
-        </div>
-        {/*  */}
-        {/* Afficher la liste des fichiers sélectionnés */}
-        {files.length > 0 && (
-          <div>
-            <p>Fichiers sélectionnés :</p>
-            <ul>
-              {files.map((file, index) => (
-                <li key={index}>{file.name}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {/* Submission button */}
-        <div>
-          <button
-            className="w-80 p-5 text-white bg-zinc-800/80 hover:bg-zinc-800"
-            disabled={formik.isSubmitting}
-            type="submit"
+        {/* Or 2/ send by email */}
+        <div className="flex justify-center items-center mt-24 bg-gray-200 py-12">
+          <a
+            href="mailto:a.c.a.montagny60240@gmail.com"
+            className="w-64 p-5 text-white bg-zinc-800/80 hover:bg-zinc-800 text-center"
           >
-            Envoyer
-          </button>
+            Envoyer des pièces jointes par mail
+          </a>
         </div>
-      </form>
+      </div>
     </>
   );
 };
 
-export default EmployeeCreateForm;
+export default ContactForm;

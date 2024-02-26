@@ -12,11 +12,14 @@ const Events = () => {
   return (
     <div className="mb-24 mx-auto w-full lg:w-3/5 xl:w-2/5">
       <Link href="/evenements">
-        <div className="gap-y-6 justify-between max-h-auto mx-auto lg:h-64 lg:gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {/* <div className="gap-y-6 justify-between max-h-auto mx-auto lg:h-64 lg:gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"> */}
+        <div className="gap-y-6 justify-between max-h-auto mx-auto lg:h-64 lg:gap-6 grid grid-cols-1 lg:grid-cols-3">
           {/* Title & button */}
           <div className="flex flex-col justify-between h-48 col-span-1 lg:h-48">
-            <h2 className="text-3xl font-semibold text-center lg:text-left">
-              {isPlural ? "Événements" : "Événement"} à venir
+            {/* <h2 className="text-3xl font-semibold text-center lg:text-left"> */}
+            <h2 className="text-3xl font-semibold text-center">
+              {/* {isPlural ? "Événements" : "Événement"} à venir */}
+              Actuellement
             </h2>
             <button className="p-6 text-white bg-zinc-800/80 hover:bg-zinc-800">
               {isPlural

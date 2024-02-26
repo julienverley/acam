@@ -7,7 +7,7 @@ export const metadata = {
 
 const ReglementPage = () => {
   return (
-    <div className="my-24 flex justify-center px-3 sm:px-0">
+    <div className="mt-24 mb-12 flex justify-center px-3 sm:px-0">
       <div className="max-w-md">
         <h1 className="text-3xl font-bold text-center mb-24">
           Règlement de l&apos;association

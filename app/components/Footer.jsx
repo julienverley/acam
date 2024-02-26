@@ -45,11 +45,11 @@ const Footer = () => {
           <div>
             <Image
               href="https://vexinweb.fr/"
-              src="/images/logos/logo_vexinweb.png"
+              src="/images/logos/logo_vexinweb_v2.png"
               alt="Logo VexinWEB"
               style={{
                 maxWidth: "100%",
-                maxHeight: "100%",
+                maxHeight: "50px",
                 objectFit: "contain",
               }}
               width={50}
