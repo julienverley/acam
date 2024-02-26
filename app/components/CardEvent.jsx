@@ -35,7 +35,8 @@ const CardEvent = ({ title, date, location, src, alt, link, description }) => {
           style={{ cursor: "pointer" }}
         >
           <Image
-            className={`h-96 ${isImageExpanded ? "h-full" : ""}`}
+            // className={`h-96 ${isImageExpanded ? "h-full" : ""}`}
+            className={`h-auto ${isImageExpanded ? "h-full" : ""}`}
             src={src}
             alt={alt}
             width={800}

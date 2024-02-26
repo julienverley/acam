@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CardHomeEvents = ({ title, date, src, alt }) => {
   return (
-    <div className="h-60">
+    <div className="h-60 my-6 md:mb-0">
       <div className="">
         <Image
           className="h-48"
