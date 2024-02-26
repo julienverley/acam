@@ -8,9 +8,9 @@ import Link from "next/link";
 const CardEvent = ({ title, date, location, src, alt, link, description }) => {
   const [isImageExpanded, setIsImageExpanded] = useState(false);
 
-  const handleImageClick = () => {
-    setIsImageExpanded(!isImageExpanded);
-  };
+  // const handleImageClick = () => {
+  //   setIsImageExpanded(!isImageExpanded);
+  // };
 
   const descriptionWithLineBreaks = description
     .split("\n")
@@ -29,21 +29,23 @@ const CardEvent = ({ title, date, location, src, alt, link, description }) => {
         Événement à venir
       </div> */}
       <div className="h-auto flex flex-col my-12 bg-white p-6 md:flex-row">
-        <div
+        <Link
           className="flex items-center border-4 border-yellow-100 md:w-1/2"
-          onClick={handleImageClick}
+          // onClick={handleImageClick}
           style={{ cursor: "pointer" }}
+          href={link}
+          target="blank"
         >
           <Image
             // className={`h-96 ${isImageExpanded ? "h-full" : ""}`}
-            className={`h-auto ${isImageExpanded ? "h-full" : ""}`}
+            // className={`h-auto ${isImageExpanded ? "h-full" : ""}`}
             src={src}
             alt={alt}
             width={800}
             height={500}
             style={{ objectFit: "contain" }}
           />
-        </div>
+        </Link>
         <Link
           href={link}
           target="blank"
