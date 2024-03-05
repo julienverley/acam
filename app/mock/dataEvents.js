@@ -6,7 +6,7 @@ const dataEvents = [
     title: "Concert Tribute to Elton John",
     date: "Samedi 18 mai 2024 à 20h30",
     date_souvenir: "mai 2024",
-    location: "Montagny-en-Vexin",
+    location: "Montagny-en-Vexin | 15 € - 18 €",
     description: `Il est le roi de la musique pop anglaise ! Cette année, le concert des JARTdins de Montagny accueille un tribute to Elton JOHN pour un live show de ses plus grands succès des années 70's à 90's. Jusqu’à 7 musiciens sur scène, pour 2 heures d'un show époustouflant où voix, interprétation, costumes et instruments éléments sont là pour reproduire un show à la hauteur de la flamboyance Sir Elton !
     
     Scannez le QR Code ou cliquez ici pour acheter vos billets !`,
@@ -23,14 +23,18 @@ const dataEvents = [
     title: "Récital de piano",
     date: "Samedi 16 mars à 20h30",
     date_souvenir: "mars 2024",
-    location: "Salle polyvalente de Montagny-en-Vexin",
+    location: "Salle polyvalente de Montagny-en-Vexinn | 7 € - 12 €",
     description: `C’est en 2005, âgé de 5 ans, que le jeune pianiste Novak Defrance découvre ses premières touches à l’Acam avec Nicolas Dumas. 
       
-    Deuxième prix du concours «Piano-Neuchâtel-Val de Travers 2021», étudiant dans la classe de Florent Boffard au Conservatoire de Musique et de Danse à Paris`,
+    Deuxième prix du concours «Piano-Neuchâtel-Val de Travers 2021», étudiant dans la classe de Florent Boffard au Conservatoire de Musique et de Danse à Paris.
+
+    Il nous fait le plaisir de revenir à Montagny pour une soirée unique !
+    
+    Cliquez ici pour acheter vos billets !`,
     souvenir: "",
     src: "/images/events/20240316_novak.jpg",
     alt: "Récital de piano",
-    link: "/rejoindre",
+    link: "https://www.helloasso.com/associations/association-culturelle-et-artistique-de-montagny/evenements/l-horloge-de-pepe-kondy-2",
     levenement: true,
     past: false,
     souvenirs: false,
