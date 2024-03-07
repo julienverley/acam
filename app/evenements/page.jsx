@@ -41,6 +41,8 @@ const EvenementsPage = () => {
                   date={event.date}
                   location={event.location}
                   description={event.description}
+                  src_qrcode={event.src_qrcode}
+                  alt_qrcode={event.alt_qrcode}
                 />
               </div>
             )}
