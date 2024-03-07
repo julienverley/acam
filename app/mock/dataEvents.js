@@ -9,11 +9,13 @@ const dataEvents = [
     location: "Montagny-en-Vexin | 15 € - 18 €",
     description: `Il est le roi de la musique pop anglaise ! Cette année, le concert des JARTdins de Montagny accueille un tribute to Elton JOHN pour un live show de ses plus grands succès des années 70's à 90's. Jusqu’à 7 musiciens sur scène, pour 2 heures d'un show époustouflant où voix, interprétation, costumes et instruments éléments sont là pour reproduire un show à la hauteur de la flamboyance Sir Elton !
     
-    Scannez le QR Code ou cliquez ici pour acheter vos billets !`,
+    Scannez le QR Code ou cliquez pour acheter vos billets !`,
     souvenir: "",
-    src: "/images/events/20240518_elton_john.jpg",
+    src: "/images/events/20240518_eltonjohn.jpg",
     alt: "Concert Tribute to Elton John",
     link: "https://www.helloasso.com/associations/association-culturelle-et-artistique-de-montagny/evenements/concert-tribute-to-elton-john",
+    src_qrcode: "/images/events/20240518_elton_john_qrcode.png",
+    alt_qrcode: "Concert Tribute to Elton John",
     levenement: false,
     past: false,
     souvenirs: false,
@@ -30,11 +32,13 @@ const dataEvents = [
 
     Il nous fait le plaisir de revenir à Montagny pour une soirée unique !
     
-    Cliquez ici pour acheter vos billets !`,
+    Scannez le QR Code ou cliquez pour acheter vos billets !`,
     souvenir: "",
     src: "/images/events/20240316_novak.jpg",
     alt: "Récital de piano",
     link: "https://www.helloasso.com/associations/association-culturelle-et-artistique-de-montagny/evenements/l-horloge-de-pepe-kondy-2",
+    src_qrcode: "/images/events/20240316_novak_qrcode.png",
+    alt_qrcode: "Récital de piano",
     levenement: true,
     past: false,
     souvenirs: false,

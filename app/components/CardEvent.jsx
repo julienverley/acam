@@ -5,7 +5,17 @@ import PlaceIcon from "@mui/icons-material/Place";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import Link from "next/link";
 
-const CardEvent = ({ title, date, location, src, alt, link, description }) => {
+const CardEvent = ({
+  title,
+  date,
+  location,
+  src,
+  alt,
+  link,
+  description,
+  src_qrcode,
+  alt_qrcode,
+}) => {
   const [isImageExpanded, setIsImageExpanded] = useState(false);
 
   // const handleImageClick = () => {
@@ -51,23 +61,36 @@ const CardEvent = ({ title, date, location, src, alt, link, description }) => {
           target="blank"
           className="text-black px-0 mt-3 sm:px-3 md:mt-0 md:w-1/2"
         >
-          <h3 className="mb-3 text-md font-bold sm:text-2xl md:ml-7">
-            {title}
-          </h3>
-          <div className="flex gap-2 items-center">
-            <div className="w- h-10 flex items-center text-gray-400">
-              <ScheduleIcon />
+          <div>
+            <h3 className="mb-3 text-md font-bold sm:text-2xl md:ml-7">
+              {title}
+            </h3>
+            <div className="flex gap-2 items-center">
+              <div className="w-6 h-10 flex items-center text-gray-400">
+                <ScheduleIcon />
+              </div>
+              <h4 className="text-md my-3 sm:text-md">{date}</h4>
             </div>
-            <h4 className="text-md my-3 sm:text-md">{date}</h4>
-          </div>
-          <div className="flex gap-2 items-center">
-            <div className="w-6 h-10 flex items-center text-gray-400">
-              <PlaceIcon />
+            <div className="flex gap-2 items-center">
+              <div className="w-6 h-10 flex items-center text-gray-400">
+                <PlaceIcon />
+              </div>
+              <h4 className="text-md my-1 sm:text-md">{location}</h4>
             </div>
-            <h4 className="text-md my-1 sm:text-md">{location}</h4>
+            {/* <p className="mt-3 ml-7 text-sm sm:text-base"> */}
+            <p className="mt-3 text-base md:ml-7">
+              {descriptionWithLineBreaks}
+            </p>
           </div>
-          {/* <p className="mt-3 ml-7 text-sm sm:text-base"> */}
-          <p className="mt-3 text-base md:ml-7">{descriptionWithLineBreaks}</p>
+          <div className="mt-3 ml-4 flex items-center">
+            <Image
+              src={src_qrcode}
+              alt={alt_qrcode}
+              width={200}
+              height={200}
+              style={{ objectFit: "cover" }}
+            />
+          </div>
         </Link>
       </div>
     </div>
