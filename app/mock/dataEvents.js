@@ -11,7 +11,7 @@ const dataEvents = [
     
     Scannez le QR Code ou cliquez pour acheter vos billets !`,
     souvenir: "",
-    src: "/images/events/20240518_eltonjohn.jpg",
+    src: "/images/events/20240518_elton_affiche.jpg",
     alt: "Concert Tribute to Elton John",
     link: "https://www.helloasso.com/associations/association-culturelle-et-artistique-de-montagny/evenements/concert-tribute-to-elton-john",
     src_qrcode: "/images/events/20240518_elton_john_qrcode.png",
