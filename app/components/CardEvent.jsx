@@ -82,13 +82,14 @@ const CardEvent = ({
               {descriptionWithLineBreaks}
             </p>
           </div>
-          <div className="mt-3 ml-4 flex items-center">
+          <div className="mt-3 flex items-center border-slate-500 md:ml-6">
             <Image
               src={src_qrcode}
               alt={alt_qrcode}
               width={200}
               height={200}
               style={{ objectFit: "cover" }}
+              className="border"
             />
           </div>
         </Link>
