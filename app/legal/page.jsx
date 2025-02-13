@@ -15,7 +15,7 @@ const LegalPage = () => {
         <div className="text-center mb-12">
           {/* <h1>Bulletin d&apos;adhésion à télécharger</h1> */}
           {/* <p>Voici un lien pour télécharger le fichier PDF :</p> */}
-          <Link target="_blank" href="/pdf/2023_adhesion.pdf" download>
+          <Link target="_blank" href="/pdf/adhesion.pdf" download>
             Télécharger le bulletin d&apos;adhésion à l&apos;Acam en PDF
           </Link>
         </div>
