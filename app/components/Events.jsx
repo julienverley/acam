@@ -31,8 +31,8 @@ const Events = () => {
 					<div className="h-auto flex gap-6 flex-col col-span-1 md:flex-row-reverse md:col-span-2 md:h-60">
 						{dataEvents
 							?.filter((event) => !event.past)
-							.slice(1, 3)
-							// .slice(0, 2)
+							// .slice(1, 3)
+							.slice(0, 2)
 							.map((event) => (
 								<CardHomeEvents
 									src={event.src}
