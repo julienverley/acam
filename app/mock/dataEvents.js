@@ -30,7 +30,7 @@ const dataEvents = [
 		},
 		alt: "Affiche de l'événement jARTdins de Montagny 2025",
 		link: "https://www.lesjartdinsdemontagny.fr/index.html",
-		levenement: false,
+		levenement: true,
 		past: false,
 		souvenirs: false,
 	},
@@ -47,7 +47,7 @@ const dataEvents = [
 		alt: "Affiche de l'événement Première partie des PEAKY PLAYERS",
 		link: "/cours",
 		levenement: false,
-		past: false,
+		past: true,
 		souvenirs: false,
 	},
 	{
@@ -62,8 +62,8 @@ const dataEvents = [
 		src: "/images/events/20250304-bibliotheque.jpg",
 		alt: "Affiche de l'événement Musique s'il vous plaît",
 		link: "/cours",
-		levenement: true,
-		past: false,
+		levenement: false,
+		past: true,
 		souvenirs: false,
 	},
 	{
