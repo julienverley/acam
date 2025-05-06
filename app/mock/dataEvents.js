@@ -10,9 +10,9 @@ const dataEvents = [
 		date_souvenir: "juin 2025",
 		location: "Le village",
 		description:
-			"C'est la 22e édition de cette manifestation organisée par l'Acam qui accueille près de 5000 visiteurs. \n Depuis plus de 20 ans, attirant un large public de tous horizons, l’événement « les jARTdins de Montagny » est un rendez-vous incontournable du printemps. \nLe village de Montagny-en-Vexin accueille dans ses jardins les réalisations d’artistes plasticiens désirant trouver des lieux d’expositions non conventionnels. \nCroisée des chemins entre l’Ile-de-France et la Normandie, Montagny-en-Vexin est une porte d’entrée des Hauts-de-France où cette « grande promenade des Arts » démontre le dynamisme et la créativité de nos artistes. \nDurant tout le week-end : des moments musicaux, de danse, de chants, de théâtre... à découvrir.",
+			"C'est une nouvelle édition de cette manifestation organisée par l'Acam qui accueille près de 5000 visiteurs. \n Depuis plus de 20 ans, attirant un large public de tous horizons, l’événement « les jARTdins de Montagny » est un rendez-vous incontournable du printemps. \nLe village de Montagny-en-Vexin accueille dans ses jardins les réalisations d’artistes plasticiens désirant trouver des lieux d’expositions non conventionnels. \nCroisée des chemins entre l’Ile-de-France et la Normandie, Montagny-en-Vexin est une porte d’entrée des Hauts-de-France où cette « grande promenade des Arts » démontre le dynamisme et la créativité de nos artistes. \nDurant tout le week-end : des moments musicaux, de danse, de chants, de théâtre... à découvrir.",
 		souvenir: "",
-		src: "/images/events/jartdins-generique.jpg",
+		src: "/images/events/20250607-jartdins.jpg",
 		medias: {
 			src1: "/images/events/20250607-jartdins/01.jpg",
 			src2: "/images/events/20250607-jartdins/02.jpg",
