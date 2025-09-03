@@ -28,9 +28,10 @@ const Events = () => {
 						</button>
 					</div>
 					{/* 2 next events */}
-					<div className="h-auto flex gap-6 flex-col col-span-1 md:flex-row-reverse md:col-span-2 md:h-60">
+					<div className="h-auto flex gap-6 flex-col col-span-1 md:flex-row md:col-span-2 md:h-60">
 						{dataEvents
-							?.filter((event) => !event.past)
+							?.filter((event) => !event.past && !event.levenement)
+							.sort((a, b) => a.id - b.id)
 							// .slice(1, 3)
 							.slice(0, 2)
 							.map((event) => (
