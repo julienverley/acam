@@ -12,6 +12,18 @@ const RejoindrePage = () => {
 			<div className="max-w-md">
 				<h1 className="text-3xl font-bold text-center mb-24">L&apos;Acam</h1>
 				{/* <div className="mb-24 text-left mx-auto w-full lg:w-3/5 xl:w-2/5"> */}
+				<div className="text-center mt-24 mb-24">
+					{/* <h1>Bulletin d&apos;adhésion à télécharger</h1> */}
+					{/* <p>Voici un lien pour télécharger le fichier PDF :</p> */}
+					<Link
+						target="_blank"
+						href="/pdf/adhesion.pdf"
+						className="opacity-75 z-10 bg-yellow-300 py-8 px-6 drop-shadow-2xl items-center"
+						download
+					>
+						Télécharger le bulletin d&apos;adhésion
+					</Link>
+				</div>
 				<div className="">
 					<p className="">
 						L&apos;Acam, Association Culturelle et Artistique de
@@ -58,19 +70,17 @@ const RejoindrePage = () => {
 					<br />
 					<div className="mt-12 flex justify-center">
 						<div className="max-w-md">
-							<div className="text-center mb-12">
-								{/* <h1>Bulletin d&apos;adhésion à télécharger</h1> */}
-								{/* <p>Voici un lien pour télécharger le fichier PDF :</p> */}
-								<Link target="_blank" href="/pdf/adhesion.pdf" download>
-									Télécharger le bulletin d&apos;adhésion à l&apos;Acam en PDF
-								</Link>
-							</div>
 							<ContactForm />
 							<div className="text-center mt-24">
 								{/* <h1>Bulletin d&apos;adhésion à télécharger</h1> */}
 								{/* <p>Voici un lien pour télécharger le fichier PDF :</p> */}
-								<Link target="_blank" href="/pdf/adhesion.pdf" download>
-									Télécharger le bulletin d&apos;adhésion à l&apos;Acam en PDF
+								<Link
+									target="_blank"
+									href="/pdf/adhesion.pdf"
+									className="opacity-75 z-10 bg-yellow-300 py-8 px-6 drop-shadow-2xl items-center"
+									download
+								>
+									Télécharger le bulletin d&apos;adhésion
 								</Link>
 							</div>
 						</div>
