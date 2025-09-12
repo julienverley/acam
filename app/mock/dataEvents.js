@@ -57,7 +57,7 @@ const dataEvents = [
 		location: "Montagny-en-Vexin",
 		description: "",
 		souvenir: "",
-		src: "/images/events/20251005-irlande.jpg",
+		src: "/images/events/20251005-irish.jpg",
 		alt: "Affiche de l'événement Après-midi irlandais",
 		link: "/cours",
 		levenement: false,
