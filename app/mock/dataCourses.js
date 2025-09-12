@@ -64,7 +64,7 @@ const dataCourses = [
 		src: "/images/courses/violon.jpg",
 		alt: "violon",
 		link: "",
-		full: false,
+		full: true,
 	},
 	{
 		id: 6,
@@ -134,12 +134,12 @@ const dataCourses = [
 	{
 		id: 11,
 		title: "Formation musicale débutants / confirmés",
-		date1: "Vendredi de 17h à 19h",
+		date1: "Vendredi de 18h à 19h",
 		date2: "",
 		date3: "",
 		location: "Montagny-en-Vexin",
 		description:
-			"Cours collectif pour tout public, Christophe COUTURIER, Fabienne NICOLARDOT",
+			"Cours collectif pour tout public, Christophe COUTURIER, Elisabeth DEL TAILLEBREST",
 		src: "/images/courses/formation.jpg",
 		alt: "Image on unsplash",
 		link: "",
