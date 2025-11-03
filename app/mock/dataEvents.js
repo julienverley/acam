@@ -4,6 +4,25 @@ import { faL } from "@fortawesome/free-solid-svg-icons";
 
 const dataEvents = [
 	{
+		id: 17,
+		title: "Duo Rossini à l'église de Montagny",
+		date: "18 octobre 2025",
+		date_souvenir: "octobre 2025",
+		location: "Montagny-en-Vexin",
+		description: "Un concert au service du patrimoine",
+		souvenir: "",
+		src: "/images/events/20251018-eglise-affiche.jpg",
+		alt: "Article de presse de l'événement Duo Rossini à l'église de Montagny, l'Impartial 24 octobre 2025",
+		link: "/souvenirs",
+		levenement: false,
+		past: true,
+		souvenirs: true,
+		medias: {
+			src1: "/images/events/20251024-eglise-presse.jpg",
+			src2: "/images/events/20251018-eglise-affiche.jpg",
+		},
+	},
+	{
 		id: 16,
 		title: "Les jARTdins de Montagny 2026",
 		date: "24 et 25 mai 2026",
@@ -61,7 +80,7 @@ const dataEvents = [
 		alt: "Affiche de l'événement Après-midi irlandais",
 		link: "/cours",
 		levenement: false,
-		past: false,
+		past: true,
 		souvenirs: false,
 	},
 	{
