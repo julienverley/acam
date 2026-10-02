@@ -31,7 +31,7 @@ const dataEvents = [
 		src: "/images/events/20260928-cours.jpg",
 		alt: "Affiche de l'événement Après-midi irlandais",
 		link: "/cours",
-		levenement: false,
+		levenement: true,
 		past: false,
 		souvenirs: false,
 	},
@@ -47,8 +47,9 @@ const dataEvents = [
 		src: "/images/events/20260905-ag.jpg",
 		alt: "Affiche de l'événement Assemblée générale de l'Acam 2026",
 		link: "/cours",
-		levenement: true,
-		past: false,
+		levenement: false,
+		past: true
+		,
 		souvenirs: false,
 	},
 	{
